@@ -596,7 +596,7 @@
                             <strong>Комплексный энергоаудит</strong>
                         </h3>
                         <ul class="custom-list">
-                            <li>Полномасштабный аудит энергопотребления</li>
+                            <li>Полномасштабный аудит опотребления</li>
                             <li>Математическое моделирование процессов</li>
                             <li>Практические испытания на стендах</li>
                         </ul>
@@ -617,6 +617,10 @@
     <h3 class="title-bar" style="color: #183a8f; margin-bottom: 25px;">
         <strong>Наши преимущества</strong>
     </h3>
+
+
+
+    
 <div class="row">
     <div class="col-12 col-md-4 mb-3" style="padding-left: 5px;">
         <ul class="custom-list">
@@ -686,10 +690,10 @@
                     <p>Группа компаний «Гидроаэроцентр» проводит энергетический аудит тепломассообменного оборудования с целью снижения энергозатрат.</p>
                     <p>Аудит включает четыре этапа:</p>
                     <ol style="line-height: 1.6; padding-left: 20px; color: #0a0a0a; margin: 0;font-weight: bold;">    
-                        <li class="mb-2">Моделирование — создаётся компьютерная модель работы конкретной установки.</li>
-                        <li class="mb-2">Диагностика — снимаются и анализируются характеристики оборудования для оценки его технического состояния.</li>
-                        <li class="mb-2">Диагностика — снимаются и анализируются характеристики оборудования для оценки его технического состояния.</li>
-                        <li class="mb-2">Оценка обновления — рассчитывается целесообразность замены оборудования на более современное.</li>
+                        <li class="mb-2">Создание модели: Формируется цифровая модель физических процессов конкретной установки или оборудования.</li>
+                        <li class="mb-2">Сбор данных: Проводятся замеры характеристик оборудования, сравниваются с паспортными данными и оценивается его техническое состояние.</li>
+                        <li class="mb-2">Оптимизация: На основе модели определяются оптимальные режимы работы и потенциал энергосбережения.</li>
+                        <li class="mb-2">Анализ модернизации: Оценивается целесообразность замены оборудования на более современное.</li>
                     </ol>
                 </div>
                 <div style="width: 35%;">
@@ -1251,105 +1255,6 @@
             </div>
         </div>
     </footer><!--/#footer-->
-
-
-
-<!-- Добавьте этот скрипт в head или перед закрывающим тегом body -->
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-  // Функция для проверки мобильного устройства
-  function isMobile() {
-    return window.innerWidth <= 768;
-  }
-
-  // Адаптация feature-block
-  const featureBlock = document.querySelector('.feature-block');
-  if (isMobile() && featureBlock) {
-    featureBlock.style.marginLeft = '0';
-    featureBlock.style.padding = '0 15px';
-  }
-
-  // Адаптация карточек
-  const customCards = document.querySelectorAll('.custom-card');
-  customCards.forEach(card => {
-    if (isMobile()) {
-      // Адаптация заголовков карточек
-      const headers = card.querySelectorAll('.custom-card-header h2');
-      headers.forEach(header => {
-        header.style.fontSize = '18px';
-      });
-
-      // Адаптация содержимого карточек
-      const cardBodies = card.querySelectorAll('.custom-card-body > div');
-      cardBodies.forEach(body => {
-        const flexContainers = body.querySelectorAll('[style*="display: flex"]');
-        flexContainers.forEach(container => {
-          container.style.flexDirection = 'column';
-          
-          const childDivs = container.querySelectorAll('div[style*="width:"');
-          childDivs.forEach(div => {
-            div.style.width = '100%';
-            div.style.maxWidth = '100%';
-            div.style.marginBottom = '20px';
-          });
-        });
-
-        // Для изображений внутри карточек
-        const images = body.querySelectorAll('img');
-        images.forEach(img => {
-          img.style.maxWidth = '100%';
-          img.style.height = 'auto';
-          img.style.margin = '0 auto';
-          img.style.display = 'block';
-        });
-      });
-    }
-  });
-
-  // Адаптация медиа-блоков
-  const mediaServiceBoxes = document.querySelectorAll('.media.service-box');
-  if (isMobile() && mediaServiceBoxes.length) {
-    mediaServiceBoxes.forEach(box => {
-      box.style.display = 'block';
-      const pullLeft = box.querySelector('.pull-left');
-      if (pullLeft) {
-        pullLeft.style.textAlign = 'center';
-        pullLeft.style.marginBottom = '15px';
-      }
-      const mediaBody = box.querySelector('.media-body');
-      if (mediaBody) {
-        mediaBody.style.paddingLeft = '0';
-      }
-    });
-  }
-});
-
-// Оригинальная функция toggleCustomContent (если нужно адаптировать и её)
-function toggleCustomContent(id) {
-  const content = document.getElementById('custom-content-' + id);
-  if (content.style.display === 'none') {
-    content.style.display = 'block';
-    
-    // Для мобильных устройств добавляем плавную прокрутку
-    if (window.innerWidth <= 768) {
-      content.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-    }
-  } else {
-    content.style.display = 'none';
-  }
-}
-</script>
-
-<!-- Ваш оригинальный HTML код остается без изменений -->
-<div class="feature-block" style="margin-left: -580px;">
-    <h3 class="title-bar" style="color: #183a8f; margin-bottom: 25px;">
-        <strong>Наши преимущества</strong>
-    </h3>
-    <!-- ... остальной ваш код ... -->
-</div>
-
-
-
 
 
 
