@@ -548,7 +548,7 @@ background: rgb(255, 255, 255);
 }
 
 .custom-card-body-content {
-    background-image: url('/images/banner/gas.jpg');
+    background-image: url('../images/banner/gas.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
