@@ -1252,15 +1252,107 @@
         </div>
     </footer><!--/#footer-->
 
-    <script src="js/jquery.js"></script>
-    <script src="js/bootstrap.min.js"></script> 
-    <script src="js/mousescroll.js"></script>
-    <script src="js/smoothscroll.js"></script>
-    <script src="js/jquery.prettyPhoto.js"></script>
-    <script src="js/jquery.isotope.min.js"></script>
-    <script src="js/jquery.inview.min.js"></script>
-    <script src="js/wow.min.js"></script>
-    <script src="js/custom-scripts.js"></script>
+
+
+<!-- Добавьте этот скрипт в head или перед закрывающим тегом body -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  // Функция для проверки мобильного устройства
+  function isMobile() {
+    return window.innerWidth <= 768;
+  }
+
+  // Адаптация feature-block
+  const featureBlock = document.querySelector('.feature-block');
+  if (isMobile() && featureBlock) {
+    featureBlock.style.marginLeft = '0';
+    featureBlock.style.padding = '0 15px';
+  }
+
+  // Адаптация карточек
+  const customCards = document.querySelectorAll('.custom-card');
+  customCards.forEach(card => {
+    if (isMobile()) {
+      // Адаптация заголовков карточек
+      const headers = card.querySelectorAll('.custom-card-header h2');
+      headers.forEach(header => {
+        header.style.fontSize = '18px';
+      });
+
+      // Адаптация содержимого карточек
+      const cardBodies = card.querySelectorAll('.custom-card-body > div');
+      cardBodies.forEach(body => {
+        const flexContainers = body.querySelectorAll('[style*="display: flex"]');
+        flexContainers.forEach(container => {
+          container.style.flexDirection = 'column';
+          
+          const childDivs = container.querySelectorAll('div[style*="width:"');
+          childDivs.forEach(div => {
+            div.style.width = '100%';
+            div.style.maxWidth = '100%';
+            div.style.marginBottom = '20px';
+          });
+        });
+
+        // Для изображений внутри карточек
+        const images = body.querySelectorAll('img');
+        images.forEach(img => {
+          img.style.maxWidth = '100%';
+          img.style.height = 'auto';
+          img.style.margin = '0 auto';
+          img.style.display = 'block';
+        });
+      });
+    }
+  });
+
+  // Адаптация медиа-блоков
+  const mediaServiceBoxes = document.querySelectorAll('.media.service-box');
+  if (isMobile() && mediaServiceBoxes.length) {
+    mediaServiceBoxes.forEach(box => {
+      box.style.display = 'block';
+      const pullLeft = box.querySelector('.pull-left');
+      if (pullLeft) {
+        pullLeft.style.textAlign = 'center';
+        pullLeft.style.marginBottom = '15px';
+      }
+      const mediaBody = box.querySelector('.media-body');
+      if (mediaBody) {
+        mediaBody.style.paddingLeft = '0';
+      }
+    });
+  }
+});
+
+// Оригинальная функция toggleCustomContent (если нужно адаптировать и её)
+function toggleCustomContent(id) {
+  const content = document.getElementById('custom-content-' + id);
+  if (content.style.display === 'none') {
+    content.style.display = 'block';
+    
+    // Для мобильных устройств добавляем плавную прокрутку
+    if (window.innerWidth <= 768) {
+      content.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    }
+  } else {
+    content.style.display = 'none';
+  }
+}
+</script>
+
+<!-- Ваш оригинальный HTML код остается без изменений -->
+<div class="feature-block" style="margin-left: -580px;">
+    <h3 class="title-bar" style="color: #183a8f; margin-bottom: 25px;">
+        <strong>Наши преимущества</strong>
+    </h3>
+    <!-- ... остальной ваш код ... -->
+</div>
+
+
+
+
+
+
 </body>
 </html>
 
