@@ -1130,7 +1130,33 @@ function toggleCustomContent(id) {
                         <li>Патент 177542 – теплообмен</li>
                         <li>Патент 2270410 – АВО</li>
                         <li>Патент 2576744 – лопасти</li>
-                    </ul>
+                    </ul>                       
+<a href="#" class="download-btn" onclick="downloadPatents()">Download Now</a>
+
+<script>
+function downloadPatents() {
+  const imageUrls = [
+    'images/patent/150604.pdf',
+    'images/patent/154273.pdf',
+    'images/patent/157239.pdf',
+    'images/patent/169430.pdf',
+    'images/patent/177542.pdf',
+    'images/patent/2270410.pdf',
+    'images/patent/2576744.pdf'
+  ];
+
+  imageUrls.forEach(url => {
+    const link = document.createElement('a');
+    link.href = url;
+    link.download = url.split('/').pop();
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  });
+}
+</script>
+
+
                 </div>
             </div>
 
@@ -1143,7 +1169,7 @@ function toggleCustomContent(id) {
                         <i class="fa fa-file-text"></i>
                         Сертификаты, лицензии, декларации
                     </h5>
-                    <ul class="patent-list">
+                    <ul class="sertificat-list">
                         <li>Декларация о соответствии вентиляторов осевых</li>
                         <li>Лицензия на источники ионизирующего излучения</li>
                         <li>Сертификат СМК Гидроаэроцентр</li>
@@ -1152,6 +1178,56 @@ function toggleCustomContent(id) {
                         <li>Сертификат ТР ТС 00775.23</li>
                         <li>Сертификат соответствия на вентиляторы ТР ТС 010</li>
                     </ul>
+                    <a href="#" class="download-btn" onclick="downloadCertificates()">Download Now</a>
+
+<script>
+function downloadCertificates() {
+  const imageUrls = [
+    'images/sertificat/Декларация.pdf',
+    'images/sertificat/Лицензия.pdf',
+    'images/sertificat/ОГН1.RU.1409.pdf',
+    'images/sertificat/ОГН4.RU.1303.pdf',
+    'images/sertificat/ТР ТС 010.pdf',
+    'images/sertificat/ТР ТС 00737.pdf',
+    'images/sertificat/ТР ТС 00775.pdf'
+  ];
+
+  imageUrls.forEach(url => {
+    const link = document.createElement('a');
+    link.href = url;
+    link.download = url.split('/').pop();
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  });
+}
+</script>
+
+                        
+
+<script>
+function downloadImages() {
+  const imageUrls = [
+    'images/sertificat/Декларация.pdf',
+    'images/sertificat/Лицензия.pdf',
+    'images/sertificat/ОГН1.RU.1409.pdf',
+    'images/sertificat/ОГН4.RU.1303.pdf',
+    'images/sertificat/ТР ТС 010.pdf',
+    'images/sertificat/ТР ТС 00737.pdf',
+    'images/sertificat/ТР ТС 00775.pdf'
+  ];
+
+  imageUrls.forEach(url => {
+    const link = document.createElement('a');
+    link.href = url;
+    link.download = url.split('/').pop(); // сохраняет как оригинальное имя файла
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  });
+}
+</script>
+
                 </div>
             </div>
         </div>
