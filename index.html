@@ -1127,40 +1127,45 @@ function toggleCustomContent(id) {
                 <div class="single-testimonial animate_fade_in">
                     <h5><i class="fa fa-shield" aria-hidden="true"></i> Патенты</h5>
                     <ul class="patent-list">
-                        <li>Патент 150604 – теплообменное устройство</li>
-                        <li>Патент 154273 – охлаждение</li>
-                        <li>Патент 157239 – рабочее колесо</li>
-                        <li>Патент 169430 – охлаждение</li>
-                        <li>Патент 177542 – теплообмен</li>
-                        <li>Патент 2270410 – АВО</li>
-                        <li>Патент 2576744 – лопасти</li>
+                            <li>
+                                <a href="images/patent/150604.pdf" target="_blank">
+                                Патент 150604 – теплообменное устройство
+                                </a>
+                            </li>
+                            <li>
+                                <a href="images/patent/154273.pdf" target="_blank">
+                                Патент 154273 – охлаждение
+                                </a>
+                            </li>
+                            <li>
+                                <a href="images/patent/157239.pdf" target="_blank">
+                                Патент 157239 – рабочее колесо
+                                </a>
+                            </li>
+                            <li>
+                                <a href="images/patent/169430.pdf" target="_blank">
+                                Патент 169430 – охлаждение
+                                </a>
+                            </li>
+                            </li>
+                                <a href="images/patent/177542.pdf" target="_blank">
+                                Патент 177542 – теплообмен
+                                </a>
+                            </li>
+    
+                            <li>
+                                <a href="images/patent/2576744.pdf" target="_blank">
+                                Патент 2576744 – лопасти
+                                </a>
+                            </li>
+                            <li>
+                                <a href="images/patent/2270410.pdf" target="_blank">
+                                Патент 2270410 – АВО
+                                </a>
+                            </li>
+
+                            </li>                            
                     </ul>                       
-<a href="#" class="download-btn" onclick="downloadPatents()">Загрузить</a>
-
-<script>
-function downloadPatents() {
-  const imageUrls = [
-    'images/patent/150604.pdf',
-    'images/patent/154273.pdf',
-    'images/patent/157239.pdf',
-    'images/patent/169430.pdf',
-    'images/patent/177542.pdf',
-    'images/patent/2270410.pdf',
-    'images/patent/2576744.pdf'
-  ];
-
-  imageUrls.forEach(url => {
-    const link = document.createElement('a');
-    link.href = url;
-    link.download = url.split('/').pop();
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-  });
-}
-</script>
-
-
                 </div>
             </div>
 
@@ -1174,64 +1179,43 @@ function downloadPatents() {
                         Сертификаты, лицензии, декларации
                     </h5>
                     <ul class="sertificat-list">
-                        <li>Декларация о соответствии вентиляторов осевых</li>
-                        <li>Лицензия на источники ионизирующего излучения</li>
-                        <li>Сертификат СМК Гидроаэроцентр</li>
-                        <li>Сертификат СТП Гидроаэроцентр</li>
-                        <li>Сертификат ТР ТС 00737.23</li>
-                        <li>Сертификат ТР ТС 00775.23</li>
-                        <li>Сертификат соответствия на вентиляторы ТР ТС 010</li>
+                            <li>
+                                <a href="images/sertificat/Декларация.pdf" target="_blank">
+                                Декларация о соответствии. Вентиляторы осевые.
+                                </a>
+                            </li>
+                                                        <li>
+                                <a href="images/sertificat/Лицензия.pdf" target="_blank">
+                                Лицензия. Источники ионизирующего излучения.
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="images/sertificat/ОГН1.RU.1409.pdf" target="_blank">
+                                ОГН1.RU.1409.К00002 Сертификат СМК ГИДРОАЭРОЦЕНТР
+                                </a>
+                            </li>
+                            <li>
+                                <a href="images/sertificat/ОГН4.RU.1303.pdf" target="_blank">
+                                ОГН4.RU.1303.В01580 Сертификат СТП ГИДРОАЭРОЦЕНТР
+                                </a>
+                            </li>
+                            <li>
+                                <a href="images/sertificat/ТР ТС 010.pdf" target="_blank">
+                                Сертификат соответствия на вентиляторы ТР ТС 010
+                                </a>
+                            </li>
+                            <li>
+                                <a href="images/sertificat/TP TC 00737.pdf" target="_blank">
+                                Сертификат ТР ТС 00737.23
+                                </a>
+                            </li>
+                            <li>
+                                <a href="images/sertificat/TP TC 00775.pdf" target="_blank">
+                                Сертификат ТР ТС 00775.23
+                                </a>
+                            </li>                       
                     </ul>
-                    <a href="#" class="download-btn" onclick="downloadCertificates()">Загрузить</a>
-
-<script>
-function downloadCertificates() {
-  const imageUrls = [
-    'images/sertificat/Декларация.pdf',
-    'images/sertificat/Лицензия.pdf',
-    'images/sertificat/ОГН1.RU.1409.pdf',
-    'images/sertificat/ОГН4.RU.1303.pdf',
-    'images/sertificat/ТР ТС 010.pdf',
-    'images/sertificat/ТР ТС 00737.pdf',
-    'images/sertificat/ТР ТС 00775.pdf'
-  ];
-
-  imageUrls.forEach(url => {
-    const link = document.createElement('a');
-    link.href = url;
-    link.download = url.split('/').pop();
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-  });
-}
-</script>
-
-                        
-
-<script>
-function downloadImages() {
-  const imageUrls = [
-    'images/sertificat/Декларация.pdf',
-    'images/sertificat/Лицензия.pdf',
-    'images/sertificat/ОГН1.RU.1409.pdf',
-    'images/sertificat/ОГН4.RU.1303.pdf',
-    'images/sertificat/ТР ТС 010.pdf',
-    'images/sertificat/ТР ТС 00737.pdf',
-    'images/sertificat/ТР ТС 00775.pdf'
-  ];
-
-  imageUrls.forEach(url => {
-    const link = document.createElement('a');
-    link.href = url;
-    link.download = url.split('/').pop(); // сохраняет как оригинальное имя файла
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-  });
-}
-</script>
-
                 </div>
             </div>
         </div>
